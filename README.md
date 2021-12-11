@@ -9,8 +9,6 @@ These functions are to be used inside a loop, hence the use of static/global var
 ```cpp
 ImVec4 Rainbow(double &static_ratio, double step = 0.01);
 
-ImVec4 RainbowP(double step = 0.01);
-
 ImVec4 Gradient2(ImVec4 col1, ImVec4 col2, double &static_ratio, double step = 0.01);
 
 ImVec4 Gradient3(ImVec4 col1, ImVec4 col2, ImVec4 col3, double &static_ratio, double step = 0.01);
