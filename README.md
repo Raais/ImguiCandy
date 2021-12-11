@@ -19,23 +19,23 @@ ImVec4 Gradient3(ImVec4 col1, ImVec4 col2, ImVec4 col3, double &static_ratio, do
   static double s0 = 0.0;
   ImGui::PushStyleColor(ImGuiCol_Button, ImCandy::Rainbow(s0));
 ```
-![Screenshot with all windows](https://user-images.githubusercontent.com/64605172/145681647-b9445ec7-5f4d-4c5f-98b8-eea840503392.gif)
+![rainbow](https://user-images.githubusercontent.com/64605172/145681647-b9445ec7-5f4d-4c5f-98b8-eea840503392.gif)
 ```cpp
   //Gradient2
   static double s1 = 0.0;
-  ImGui::PushStyleColor(ImGuiCol_Button, ImCandy::Gradient2(IV4_CRIMSON, IV4_BUBBLEGUM, s1));
+  ImGui::PushStyleColor(ImGuiCol_WindowBg, ImCandy::Gradient2(IV4_VIOLET, IV4_BUBBLEGUM, s1));
 ```
-![Screenshot with all windows](https://user-images.githubusercontent.com/64605172/145681640-cfc019dc-99ba-41a2-a06a-8847867aa6f3.gif)
+![gradient](https://user-images.githubusercontent.com/64605172/145683127-8439a3fb-8a44-4642-94a4-97dd46c5349b.gif)
 ## Themes
  - Blender Dark [Improvised]
 ```cpp
   ImCandy::Theme_Blender();
 ```
-![Screenshot with all windows](https://user-images.githubusercontent.com/64605172/145681657-dc9786ae-5f79-4eca-90a6-197579b94fa5.png)
+![blender](https://user-images.githubusercontent.com/64605172/145681657-dc9786ae-5f79-4eca-90a6-197579b94fa5.png)
  - Cyberpunk Neon [Improvised]
 ```cpp
   ImCandy::Theme_Cyberpunk();
 ```
-![Screenshot with all windows](https://user-images.githubusercontent.com/64605172/145681654-2ebea5fc-ec99-44ba-a808-d20721415f6c.png)
+![cyberpunk](https://user-images.githubusercontent.com/64605172/145681654-2ebea5fc-ec99-44ba-a808-d20721415f6c.png)
 ## Contribute
 Contribute your own themes by opening an [issue](https://github.com/Raais/ImguiCandy/issues) or [pull request](https://github.com/Raais/ImguiCandy/pulls).
