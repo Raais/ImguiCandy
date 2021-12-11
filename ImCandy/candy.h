@@ -307,5 +307,59 @@ namespace ImCandy
         style->ScrollbarRounding                = 0.00f;
         style->GrabRounding                     = 0.00f;
       }
+      
+      void Theme_Nord(ImGuiStyle* dst = NULL)  
+      {
+        // Nord/Nordic GTK [Improvised]
+        // https://github.com/EliverLara/Nordic
+        ImGuiStyle* style = dst ? dst : &ImGui::GetStyle();
+        ImVec4* colors = style->Colors;
+        ImGui::StyleColorsDark(style);//Reset to base/dark theme
+        colors[ImGuiCol_Text]                   = ImVec4(0.85f, 0.87f, 0.91f, 0.88f);
+        colors[ImGuiCol_TextDisabled]           = ImVec4(0.49f, 0.50f, 0.53f, 1.00f);
+        colors[ImGuiCol_WindowBg]               = ImVec4(0.18f, 0.20f, 0.25f, 1.00f);
+        colors[ImGuiCol_ChildBg]                = ImVec4(0.16f, 0.17f, 0.20f, 1.00f);
+        colors[ImGuiCol_PopupBg]                = ImVec4(0.23f, 0.26f, 0.32f, 1.00f);
+        colors[ImGuiCol_Border]                 = ImVec4(0.14f, 0.16f, 0.19f, 1.00f);
+        colors[ImGuiCol_BorderShadow]           = ImVec4(0.09f, 0.09f, 0.09f, 0.00f);
+        colors[ImGuiCol_FrameBg]                = ImVec4(0.23f, 0.26f, 0.32f, 1.00f);
+        colors[ImGuiCol_FrameBgHovered]         = ImVec4(0.56f, 0.74f, 0.73f, 1.00f);
+        colors[ImGuiCol_FrameBgActive]          = ImVec4(0.53f, 0.75f, 0.82f, 1.00f);
+        colors[ImGuiCol_TitleBg]                = ImVec4(0.16f, 0.16f, 0.20f, 1.00f);
+        colors[ImGuiCol_TitleBgActive]          = ImVec4(0.16f, 0.16f, 0.20f, 1.00f);
+        colors[ImGuiCol_TitleBgCollapsed]       = ImVec4(0.16f, 0.16f, 0.20f, 1.00f);
+        colors[ImGuiCol_MenuBarBg]              = ImVec4(0.16f, 0.16f, 0.20f, 1.00f);
+        colors[ImGuiCol_ScrollbarBg]            = ImVec4(0.18f, 0.20f, 0.25f, 1.00f);
+        colors[ImGuiCol_ScrollbarGrab]          = ImVec4(0.23f, 0.26f, 0.32f, 0.60f);
+        colors[ImGuiCol_ScrollbarGrabHovered]   = ImVec4(0.23f, 0.26f, 0.32f, 1.00f);
+        colors[ImGuiCol_ScrollbarGrabActive]    = ImVec4(0.23f, 0.26f, 0.32f, 1.00f);
+        colors[ImGuiCol_CheckMark]              = ImVec4(0.37f, 0.51f, 0.67f, 1.00f);
+        colors[ImGuiCol_SliderGrab]             = ImVec4(0.51f, 0.63f, 0.76f, 1.00f);
+        colors[ImGuiCol_SliderGrabActive]       = ImVec4(0.37f, 0.51f, 0.67f, 1.00f);
+        colors[ImGuiCol_Button]                 = ImVec4(0.18f, 0.20f, 0.25f, 1.00f);
+        colors[ImGuiCol_ButtonHovered]          = ImVec4(0.51f, 0.63f, 0.76f, 1.00f);
+        colors[ImGuiCol_ButtonActive]           = ImVec4(0.37f, 0.51f, 0.67f, 1.00f);
+        colors[ImGuiCol_Header]                 = ImVec4(0.51f, 0.63f, 0.76f, 1.00f);
+        colors[ImGuiCol_HeaderHovered]          = ImVec4(0.53f, 0.75f, 0.82f, 1.00f);
+        colors[ImGuiCol_HeaderActive]           = ImVec4(0.37f, 0.51f, 0.67f, 1.00f);
+        colors[ImGuiCol_SeparatorHovered]       = ImVec4(0.56f, 0.74f, 0.73f, 1.00f);
+        colors[ImGuiCol_SeparatorActive]        = ImVec4(0.53f, 0.75f, 0.82f, 1.00f);
+        colors[ImGuiCol_ResizeGrip]             = ImVec4(0.53f, 0.75f, 0.82f, 0.86f);
+        colors[ImGuiCol_ResizeGripHovered]      = ImVec4(0.61f, 0.74f, 0.87f, 1.00f);
+        colors[ImGuiCol_ResizeGripActive]       = ImVec4(0.37f, 0.51f, 0.67f, 1.00f);
+        colors[ImGuiCol_Tab]                    = ImVec4(0.18f, 0.20f, 0.25f, 1.00f);
+        colors[ImGuiCol_TabHovered]             = ImVec4(0.22f, 0.24f, 0.31f, 1.00f);
+        colors[ImGuiCol_TabActive]              = ImVec4(0.23f, 0.26f, 0.32f, 1.00f);
+        colors[ImGuiCol_TabUnfocused]           = ImVec4(0.13f, 0.15f, 0.18f, 1.00f);
+        colors[ImGuiCol_TabUnfocusedActive]     = ImVec4(0.17f, 0.19f, 0.23f, 1.00f);
+        colors[ImGuiCol_PlotHistogram]          = ImVec4(0.56f, 0.74f, 0.73f, 1.00f);
+        colors[ImGuiCol_PlotHistogramHovered]   = ImVec4(0.53f, 0.75f, 0.82f, 1.00f);
+        colors[ImGuiCol_TextSelectedBg]         = ImVec4(0.37f, 0.51f, 0.67f, 1.00f);
+        colors[ImGuiCol_NavHighlight]           = ImVec4(0.53f, 0.75f, 0.82f, 0.86f);
+        style->WindowBorderSize                 = 1.00f;
+        style->ChildBorderSize                  = 1.00f;
+        style->PopupBorderSize                  = 1.00f;
+        style->FrameBorderSize                  = 1.00f;
+      }
 
 };
