@@ -37,5 +37,10 @@ ImVec4 Gradient3(ImVec4 col1, ImVec4 col2, ImVec4 col3, double &static_ratio, do
   ImCandy::Theme_Cyberpunk();
 ```
 ![cyberpunk](https://user-images.githubusercontent.com/64605172/145681654-2ebea5fc-ec99-44ba-a808-d20721415f6c.png)
+ - Nord/Nordic GTK [Improvised]
+```cpp
+  ImCandy::Nord();
+```
+![nord](https://user-images.githubusercontent.com/64605172/145686658-b93073ab-1161-4898-bccf-b6f2a757d13a.png)
 ## Contribute
 Contribute your own themes by opening an [issue](https://github.com/Raais/ImguiCandy/issues) or [pull request](https://github.com/Raais/ImguiCandy/pulls).
