@@ -205,11 +205,13 @@ namespace ImCandy
       /*---------------------------------------------------------------------------------------------------------
                                                         THEMES                                                 */
 
-      void Theme_Blender()  
+      void Theme_Blender(ImGuiStyle* dst = NULL)  
       {
-        // 'Blender Dark' theme from 3.0.0 [Improvised]
+        // 'Blender Dark' theme from v3.0.0 [Improvised]
         // Colors grabbed using X11 Soft/xcolor
-        ImVec4* colors                          = ImGui::GetStyle().Colors;
+        ImGuiStyle* style = dst ? dst : &ImGui::GetStyle();
+        ImVec4* colors = style->Colors;
+        ImGui::StyleColorsDark(style);//Reset to base/dark theme
         colors[ImGuiCol_Text]                   = ImVec4(0.84f, 0.84f, 0.84f, 1.00f);
         colors[ImGuiCol_WindowBg]               = ImVec4(0.22f, 0.22f, 0.22f, 1.00f);
         colors[ImGuiCol_ChildBg]                = ImVec4(0.19f, 0.19f, 0.19f, 1.00f);
@@ -247,22 +249,22 @@ namespace ImCandy
         colors[ImGuiCol_PlotHistogramHovered]   = ImVec4(0.20f, 0.39f, 0.69f, 1.00f);
         colors[ImGuiCol_TextSelectedBg]         = ImVec4(0.28f, 0.45f, 0.70f, 1.00f);
         colors[ImGuiCol_NavHighlight]           = ImVec4(0.28f, 0.45f, 0.70f, 1.00f);
-
-        ImGuiStyle& style                       = ImGui::GetStyle();
-        style.WindowPadding                     = ImVec2(12.00f, 8.00f);
-        style.ItemSpacing                       = ImVec2(7.00f, 3.00f);
-        style.GrabMinSize                       = 20.00f;
-        style.WindowRounding                    = 8.00f;
-        style.FrameBorderSize                   = 0.00f;
-        style.FrameRounding                     = 4.00f;
-        style.GrabRounding                      = 12.00f;
+        style->WindowPadding                     = ImVec2(12.00f, 8.00f);
+        style->ItemSpacing                       = ImVec2(7.00f, 3.00f);
+        style->GrabMinSize                       = 20.00f;
+        style->WindowRounding                    = 8.00f;
+        style->FrameBorderSize                   = 0.00f;
+        style->FrameRounding                     = 4.00f;
+        style->GrabRounding                      = 12.00f;
       }
 
-      void Theme_Cyberpunk()  
+      void Theme_Cyberpunk(ImGuiStyle* dst = NULL)  
       {
         // Cyberpunk Neon [Improvised]
         // https://github.com/Roboron3042/Cyberpunk-Neon
-        ImVec4* colors                          = ImGui::GetStyle().Colors;
+        ImGuiStyle* style = dst ? dst : &ImGui::GetStyle();
+        ImVec4* colors = style->Colors;
+        ImGui::StyleColorsDark(style);//Reset to base/dark theme
         colors[ImGuiCol_Text]                   = ImVec4(0.00f, 0.82f, 1.00f, 1.00f);
         colors[ImGuiCol_TextDisabled]           = ImVec4(0.00f, 0.36f, 0.63f, 1.00f);
         colors[ImGuiCol_WindowBg]               = ImVec4(0.00f, 0.04f, 0.12f, 1.00f);
@@ -299,13 +301,11 @@ namespace ImCandy
         colors[ImGuiCol_TabHovered]             = ImVec4(0.00f, 0.92f, 1.00f, 0.80f);
         colors[ImGuiCol_TabActive]              = ImVec4(0.62f, 0.00f, 0.80f, 1.00f);
         colors[ImGuiCol_PlotHistogram]          = ImVec4(0.00f, 1.00f, 0.88f, 1.00f);
-
-        ImGuiStyle& style                       = ImGui::GetStyle();
-        style.FrameBorderSize                   = 0.00f;
-        style.WindowRounding                    = 0.00f;
-        style.FrameRounding                     = 0.00f;
-        style.ScrollbarRounding                 = 0.00f;
-        style.GrabRounding                      = 0.00f;
+        style->FrameBorderSize                  = 0.00f;
+        style->WindowRounding                   = 0.00f;
+        style->FrameRounding                    = 0.00f;
+        style->ScrollbarRounding                = 0.00f;
+        style->GrabRounding                     = 0.00f;
       }
 
 };
